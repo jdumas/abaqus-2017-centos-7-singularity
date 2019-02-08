@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Media mediaLevel="419" mediaName="CODE\linux_a64\SIMULIA_Abaqus_CAE.media\media">
 	<SetVariable name="browseAnyway_differentSolver" setByUser="true" setType="default">
-            <SetPath value="/opt/abaqus/2017/V6R2017x"/>
+		<SetPath value="/usr/DassaultSystemes/SimulationServices/V6R2017x"/>
 	</SetVariable>
 	<SetVariable name="commandsDir" setByUser="true" setType="default">
-            <SetPath value="/opt/abaqus/2017/Commands"/>
+		<SetPath value="/var/DassaultSystemes/SIMULIA/Commands"/>
 	</SetVariable>
 	<SetVariable name="pluginsDir" setByUser="true" setType="default">
-            <SetPath value="/opt/abaqus/2017/CAE/plugins/2017"/>
+		<SetPath value="/var/DassaultSystemes/SIMULIA/CAE/plugins/2017"/>
 	</SetVariable>
 	<SetVariable name="serverType_radioButton" setByUser="true" setType="default"/>
 	<SetVariable name="serverType_radioButton?flex" setByUser="true" setType="default">
@@ -17,7 +17,7 @@
 		<SetBoolean value="false"/>
 	</SetVariable>
 	<SetVariable name="licenseServer1" setByUser="true" setType="default">
-		<SetText value="abaquslm.sheffield.ac.uk"/>
+		<SetText value="27000@192.168.1.81"/>
 	</SetVariable>
 	<SetVariable name="licenseServer2" setByUser="true" setType="default">
 		<SetText value=""/>
@@ -36,10 +36,10 @@
 		<SetBoolean value="false"/>
 	</SetVariable>
 	<SetVariable name="docRootPath" setByUser="true" setType="default">
-            <SetPath value="/opt/abaqus/2017/Documentation"/>
+		<SetPath value="/usr/DassaultSystemes/SIMULIA2017doc"/>
 	</SetVariable>
 	<SetVariable name="TARGET_PATH" setByUser="true" setType="default">
-            <SetPath value="/opt/abaqus/2017/CAE/2017"/>
+		<SetPath value="/usr/SIMULIA/CAE/2017"/>
 	</SetVariable>
 	<SetVariable name="FinishPanel" setByUser="true" setType="default"/>
 </Media>

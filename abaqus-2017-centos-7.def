@@ -3,7 +3,8 @@ From: centos:7
 
 %setup
     mkdir -p ${SINGULARITY_ROOTFS}/iso-unpacked/
-    bsdtar xf Abaqus2017.iso -C ${SINGULARITY_ROOTFS}/iso-unpacked/
+    rsync -a abaqus/ ${SINGULARITY_ROOTFS}/iso-unpacked
+    ls ${SINGULARITY_ROOTFS}/iso-unpacked
     mkdir -p ${SINGULARITY_ROOTFS}/cfgs/
     cp assets/VirtualGL.repo ${SINGULARITY_ROOTFS}/etc/yum.repos.d
     cp assets/UserIntentions_DOC.xml ${SINGULARITY_ROOTFS}/cfgs/
@@ -18,11 +19,11 @@ From: centos:7
     yum clean all && rm -rf /var/cache/yum
     ksh ./1/SIMULIA_Documentation/AllOS/1/StartTUI.sh --silent /cfgs/UserIntentions_DOC.xml
     ksh ./2/SIMULIA_AbaqusServices/Linux64/1/StartTUI.sh --silent /cfgs/simulation-services-UserIntentions_CODE.xml
-    ksh ./2/SIMULIA_Abaqus_CAE/Linux64/1/StartTUI.sh --silent /cfgs/cae-UserIntentions_CODE.xml
-    ksh ./2/SIMULIA_AbaqusServices_CAA_API/Linux64/1/StartTUI.sh --silent /cfgs/UserIntentions_CAA_Additional.xml
+    # ksh ./2/SIMULIA_Abaqus_CAE/Linux64/1/StartTUI.sh --silent /cfgs/cae-UserIntentions_CODE.xml
+    # ksh ./2/SIMULIA_AbaqusServices_CAA_API/Linux64/1/StartTUI.sh --silent /cfgs/UserIntentions_CAA_Additional.xml
 
 %environment
-    export PATH=/opt/abaqus/2017/Commands:$PATH
+    export PATH=/var/DassaultSystemes/SIMULIA/2017/Commands:$PATH
 
 %runscript
     vglrun abaqus cae
