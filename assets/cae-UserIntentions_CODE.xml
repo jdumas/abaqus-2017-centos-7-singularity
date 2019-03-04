@@ -17,7 +17,7 @@
 		<SetBoolean value="false"/>
 	</SetVariable>
 	<SetVariable name="licenseServer1" setByUser="true" setType="default">
-		<SetText value="27000@192.168.1.81"/>
+		<SetText value="27000@192.168.20.29"/>
 	</SetVariable>
 	<SetVariable name="licenseServer2" setByUser="true" setType="default">
 		<SetText value=""/>
